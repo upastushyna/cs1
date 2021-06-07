@@ -1,9 +1,9 @@
-my:
-   greeting: Hello World from Config server
-   list:
-      values: One, Two, Three, Four
-
-db:
-   connection: connection-string-here-from-config-server 222222222
-   host: 127.0.0.1
-   port: 1200
+spring:
+  application:
+    name: profile
+  profiles:
+    active: prod
+  cloud:
+    config:
+      name: profile
+      uri: http://localhost:8181
